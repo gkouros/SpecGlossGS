@@ -318,24 +318,79 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Image carousel -->
+<!-- <section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <h2 class="title is-3">Method</h2>
+        <img src="static/images/pipeline.png" alt="pipeline">
+        <h2 class="content has-text-justified">
+          <strong> Rendering pipeline of BG-Triangles.</strong> The BG-Triangle rendering pipeline has three modules. The Primitive Rasterization module tessellates the Bézier triangle, producing coordinate and index maps, as well as boundary points. 
+          These maps are then used in the sub-primitive generation module to create pixel-aligned sub-primitives for differentiable rendering. The discontinuity-aware alpha blending module utilizes the boundary points to render images with sharp edges. 
+          Finally, the fully differentiable pipeline allows gradient backpropagation along the blue arrows to optimize the control points of BG-Triangles.
+        </h2>
+       
+        <hr>
+        <h2 class="title is-3">Results</h2>
+        <img src="static/images/POC.png" alt="results" style="width: 80%;">
+        <h2 class="content has-text-centered">
+          After training, Bézier primitives effectively outline the object’s silhouette, capturing smooth curves like those in an ellipsoid. The texture is represented by the 3D boundaries, creating recognizable patterns in the boundary map. 
+          This structure enables discontinuity-aware rendering, producing sharp, defined edges and superior clarity. 
+          In contrast, 3DGS, which aligns only with the pixel sampling rate from training viewpoints, results in blurry close-ups and requires more parameters.
+        </h2>
+        <img src="static/images/exp1.png" alt="Comparison table">
+        <h2 class="content has-text-centered">
+          BG-Triangle further leverages attribute sharing within primitives to achieve highly efficient expressiveness, enabling more effective scene representation and novel view synthesis, particularly when using much fewer number of primitives.  
+          Our approach demonstrates significant advantages in terms of the LPIPS metric, suggesting that the images we generate are perceptually more similar and visually closer to the target.
+        </h2>
+        <img src="static/images/exp.png" alt="Comparisons">
+        <h2 class="content has-text-centered">
+          Qualitative comparisons.
+        </h2>
+
+        <br>
+        <h2 class="subtitle has-text-centered">
+          Please refer to our paper for more results.
+        </h2>
+
+      </div>
+    </div>
+  </div>
+</section> -->
+    
+<!-- Pipeline figure -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-        <!-- TODO: Replace with your research result images -->
+        <h2 class="title is-3">Method</h2>
         <img src="static/images/pipeline.png" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle">
           Overview of our method's pipeline built on 2DGS. Gaussian splats rasterize to a G buffer of albedo, roughness, F0, indirect color, and surface normals. 
           A differentiable prefiltered environment cubemap with mipmaps provides lighting in a physically based deferred renderer. The HDR environment map
           is learned in a coarse-to-fine manner. Supervision uses an sRGB photometric loss between shaded output and ground truth (GT), plus normal and
           diffuse priors that reduce ambiguity between geometry, materials, and lighting.
         </h2>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End Pipeline figure -->
+
+<!-- Results figure -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+        <h2 class="title is-3">Results</h2>
+        <!-- <img src="static/images/pipeline.png" alt="First research result visualization" loading="lazy"/>
+        <h2 class="subtitle">
+          Overview of our method's pipeline built on 2DGS. Gaussian splats rasterize to a G buffer of albedo, roughness, F0, indirect color, and surface normals. 
+          A differentiable prefiltered environment cubemap with mipmaps provides lighting in a physically based deferred renderer. The HDR environment map
+          is learned in a coarse-to-fine manner. Supervision uses an sRGB photometric loss between shaded output and ground truth (GT), plus normal and
+          diffuse priors that reduce ambiguity between geometry, materials, and lighting.
+        </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End Results figure -->
 
     
 <!-- Image carousel -->
