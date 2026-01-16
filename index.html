@@ -123,7 +123,7 @@
         "name": "Georgios Kouros",
         "affiliation": {
           "@type": "Organization",
-          "name": "KU Leuven"
+          "name": "Department of Electrical Engineering (ESAT), KU Leuven, Belgium"
         }
       },
       {
@@ -131,7 +131,7 @@
         "name": "Minye Wu",
         "affiliation": {
           "@type": "Organization",
-          "name": "KU Leuven"
+          "name": "Department of Electrical Engineering (ESAT), KU Leuven, Belgium"
         }
       }
       {
@@ -139,7 +139,7 @@
         "name": "Tinne Tuytelaars",
         "affiliation": {
           "@type": "Organization",
-          "name": "KU Leuven"
+          "name": "Department of Electrical Engineering (ESAT), KU Leuven, Belgium"
         }
       }
 
@@ -265,7 +265,7 @@
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">KU Leuven<br>WACV 2026</span>
+                    <span class="author-block">Department of Electrical Engineering (ESAT), KU Leuven, Belgium<br>WACV 2026</span>
                     <!-- TODO: Remove this line if no equal contribution -->
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
@@ -284,7 +284,7 @@
                     </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -292,11 +292,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/gkouros/SpecGloss-GS" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -307,7 +307,7 @@
 
                 <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2510.02069.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -351,7 +351,13 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Accurate reconstruction and relighting of glossy objects remains a longstanding challenge, as object shape, material properties, and illumination are inherently difficult to disentangle. 
+            Existing neural rendering approaches often rely on simplified BRDF models or parameterizations that couple diffuse and specular components, which restrict faithful material recovery and 
+            limit relighting fidelity. We propose a relightable framework that integrates a microfacet BRDF with the specular-glossiness parameterization into 2D Gaussian Splatting with deferred shading.
+            This formulation enables more physically consistent material decomposition, while diffusion-based priors for surface normals and diffuse color guide early-stage optimization and mitigate ambiguity.
+            A coarse-to-fine environment map optimization accelerates convergence, and negative-only environment map clipping preserves high-dynamic-range specular reflections. Extensive experiments on complex,
+            glossy scenes demonstrate that our method achieves high-quality geometry and material reconstruction, delivering substantially more realistic and consistent relighting under novel illumination 
+            compared to existing Gaussian splatting methods.   
           </p>
         </div>
       </div>
